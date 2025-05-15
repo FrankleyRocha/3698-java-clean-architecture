@@ -1,0 +1,9 @@
+POST http://localhost:8080/usuarios
+content-type: application/json
+
+{
+    "cpf": "123.456.789-88",
+    "nome": "Jacqueline",
+    "nascimento": "1990-09-08",
+    "email": "jacqueline.oliveira@alura.com.br"
+}
