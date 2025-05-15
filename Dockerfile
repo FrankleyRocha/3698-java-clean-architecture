@@ -13,6 +13,15 @@ RUN apt install -y \
     build-essential \
     zip unzip
 
+#configuração de locale
+RUN apt-get update && \
+    apt-get install -y locales && \
+    locale-gen pt_BR.UTF-8 && \
+    update-locale LANG=pt_BR.UTF-8
+
+ENV LANG=pt_BR.UTF-8
+ENV LC_ALL=pt_BR.UTF-8
+
 #necessario para o python
 #RUN apt install -y \
 #    zlib1g-dev \
